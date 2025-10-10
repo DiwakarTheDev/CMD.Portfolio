@@ -114,7 +114,7 @@ const commands: Record<string, () => CommandOutput> = {
           <img 
             src={projectTerminal} 
             alt="Terminal Portfolio" 
-            className="w-full max-w-2xl rounded-lg border border-primary/30 hover:border-primary transition-all"
+            className="w-24 h-24 rounded-lg border border-primary/30 hover:border-primary transition-all object-cover"
           />
           <div className="text-secondary text-glow-secondary font-semibold">🖥️ Portfolio Terminal</div>
           <p className="text-sm mt-1 mb-2">A unique terminal-style portfolio website with command-line interface and hacker aesthetic.</p>
@@ -128,7 +128,7 @@ const commands: Record<string, () => CommandOutput> = {
           <img 
             src={projectEcommerce} 
             alt="E-Commerce Platform" 
-            className="w-full max-w-2xl rounded-lg border border-primary/30 hover:border-primary transition-all"
+            className="w-24 h-24 rounded-lg border border-primary/30 hover:border-primary transition-all object-cover"
           />
           <div className="text-secondary text-glow-secondary font-semibold">🚀 E-Commerce Platform</div>
           <p className="text-sm mt-1 mb-2">Full-stack e-commerce solution with modern shopping experience and real-time inventory management.</p>
@@ -142,7 +142,7 @@ const commands: Record<string, () => CommandOutput> = {
           <img 
             src={projectWeather} 
             alt="Weather Dashboard" 
-            className="w-full max-w-2xl rounded-lg border border-primary/30 hover:border-primary transition-all"
+            className="w-24 h-24 rounded-lg border border-primary/30 hover:border-primary transition-all object-cover"
           />
           <div className="text-secondary text-glow-secondary font-semibold">🌦️ Weather Dashboard</div>
           <p className="text-sm mt-1 mb-2">Real-time weather tracking application with beautiful UI and forecast visualization.</p>
