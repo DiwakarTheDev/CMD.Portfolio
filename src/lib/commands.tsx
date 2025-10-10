@@ -1,3 +1,8 @@
+import profileAvatar from "@/assets/profile-avatar.png";
+import projectTerminal from "@/assets/project-terminal.png";
+import projectEcommerce from "@/assets/project-ecommerce.png";
+import projectWeather from "@/assets/project-weather.png";
+
 export interface CommandOutput {
   type: "output" | "error";
   content: string | React.ReactNode;
@@ -24,17 +29,25 @@ const commands: Record<string, () => CommandOutput> = {
   about: () => ({
     type: "output",
     content: (
-      <div className="space-y-3">
-        <div className="text-primary text-glow text-lg font-bold">Diwakar - Full Stack Developer</div>
-        <div className="text-terminal-text">
-          <p className="mb-2">
+      <div className="space-y-4">
+        <div className="flex items-start gap-4">
+          <img 
+            src={profileAvatar} 
+            alt="Diwakar's profile" 
+            className="w-24 h-24 rounded-lg border-2 border-primary border-glow"
+          />
+          <div className="space-y-2">
+            <div className="text-primary text-glow text-lg font-bold">Diwakar - Full Stack Developer</div>
+            <div className="text-secondary text-glow-secondary">Problem Solver | Tech Enthusiast</div>
+            <div className="text-muted-foreground">📍 Based in India</div>
+          </div>
+        </div>
+        <div className="text-terminal-text space-y-2">
+          <p>
             👋 Hello! I'm a passionate developer who loves building elegant solutions to complex problems.
           </p>
-          <p className="mb-2">
-            🌍 Based in India, working with cutting-edge web technologies.
-          </p>
-          <p className="mb-2">
-            💡 I specialize in creating beautiful, performant, and user-friendly applications.
+          <p>
+            💡 I specialize in creating beautiful, performant, and user-friendly applications with cutting-edge web technologies.
           </p>
           <p>
             🚀 Always learning, always building, always improving.
@@ -95,31 +108,46 @@ const commands: Record<string, () => CommandOutput> = {
     type: "output",
     content: (
       <div className="space-y-4">
-        <div className="text-primary text-glow font-semibold mb-3">Featured Projects:</div>
+        <div className="text-primary text-glow font-semibold mb-3 text-lg">Featured Projects:</div>
         
-        <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
+        <div className="space-y-3">
+          <img 
+            src={projectTerminal} 
+            alt="Terminal Portfolio" 
+            className="w-full max-w-2xl rounded-lg border border-primary/30 hover:border-primary transition-all"
+          />
+          <div className="text-secondary text-glow-secondary font-semibold">🖥️ Portfolio Terminal</div>
+          <p className="text-sm mt-1 mb-2">A unique terminal-style portfolio website with command-line interface and hacker aesthetic.</p>
+          <div className="flex gap-3 text-xs">
+            <a href="https://github.com/diwakar" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+          </div>
+        </div>
+
+        <div className="space-y-3 mt-6">
+          <img 
+            src={projectEcommerce} 
+            alt="E-Commerce Platform" 
+            className="w-full max-w-2xl rounded-lg border border-primary/30 hover:border-primary transition-all"
+          />
           <div className="text-secondary text-glow-secondary font-semibold">🚀 E-Commerce Platform</div>
-          <p className="text-sm mt-1 mb-2">Full-stack e-commerce solution with Next.js, Stripe integration, and real-time inventory management.</p>
+          <p className="text-sm mt-1 mb-2">Full-stack e-commerce solution with modern shopping experience and real-time inventory management.</p>
           <div className="flex gap-3 text-xs">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
+            <a href="https://github.com/diwakar" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
             <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
           </div>
         </div>
 
-        <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
-          <div className="text-secondary text-glow-secondary font-semibold">🎨 Design System Library</div>
-          <p className="text-sm mt-1 mb-2">Comprehensive React component library with TypeScript, Storybook documentation, and accessibility features.</p>
+        <div className="space-y-3 mt-6">
+          <img 
+            src={projectWeather} 
+            alt="Weather Dashboard" 
+            className="w-full max-w-2xl rounded-lg border border-primary/30 hover:border-primary transition-all"
+          />
+          <div className="text-secondary text-glow-secondary font-semibold">🌦️ Weather Dashboard</div>
+          <p className="text-sm mt-1 mb-2">Real-time weather tracking application with beautiful UI and forecast visualization.</p>
           <div className="flex gap-3 text-xs">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
-            <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
-          </div>
-        </div>
-
-        <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
-          <div className="text-secondary text-glow-secondary font-semibold">📊 Analytics Dashboard</div>
-          <p className="text-sm mt-1 mb-2">Real-time analytics platform with data visualization, custom charts, and interactive filtering.</p>
-          <div className="flex gap-3 text-xs">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
+            <a href="https://github.com/diwakar" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
             <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
           </div>
         </div>
