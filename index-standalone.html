@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diwakar@portfolio:~$ Terminal Portfolio</title>
+    <meta name="description" content="Interactive terminal-style developer portfolio with CLI interface">
+    <meta name="author" content="Diwakar">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <meta property="og:title" content="Terminal Portfolio - Developer CLI">
+    <meta property="og:description" content="Interactive terminal-style developer portfolio">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="terminal-window">
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <div class="terminal-title">
+                    <span>diwakar@portfolio: ~</span>
+                    <span class="status-indicator" id="statusIndicator"></span>
+                </div>
+            </div>
+            
+            <!-- Terminal Content -->
+            <div class="terminal-content" id="terminalContent">
+                <div class="output-line">Welcome to Diwakar's Portfolio Terminal v1.0.0</div>
+                <div class="output-line">Type "help" to see available commands.</div>
+            </div>
+            
+            <!-- Command Input -->
+            <div class="command-input-wrapper">
+                <span class="prompt">❯</span>
+                <input type="text" id="commandInput" class="command-input" autocomplete="off" spellcheck="false">
+                <span class="cursor">█</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
