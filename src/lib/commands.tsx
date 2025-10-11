@@ -1,3 +1,8 @@
+import profileAvatar from "@/assets/profile-avatar.png";
+import projectEcommerce from "@/assets/project-ecommerce.png";
+import projectDesignSystem from "@/assets/project-design-system.png";
+import projectAnalytics from "@/assets/project-analytics.png";
+
 export interface CommandOutput {
   type: "output" | "error";
   content: string | React.ReactNode;
@@ -25,20 +30,29 @@ const commands: Record<string, () => CommandOutput> = {
     type: "output",
     content: (
       <div className="space-y-3">
-        <div className="text-primary text-glow text-lg font-bold">Diwakar - Full Stack Developer</div>
-        <div className="text-terminal-text">
-          <p className="mb-2">
-            👋 Hello! I'm a passionate developer who loves building elegant solutions to complex problems.
-          </p>
-          <p className="mb-2">
-            🌍 Based in India, working with cutting-edge web technologies.
-          </p>
-          <p className="mb-2">
-            💡 I specialize in creating beautiful, performant, and user-friendly applications.
-          </p>
-          <p>
-            🚀 Always learning, always building, always improving.
-          </p>
+        <div className="flex items-start gap-4">
+          <img 
+            src={profileAvatar} 
+            alt="Diwakar Profile" 
+            className="w-24 h-24 rounded-full object-cover border-2 border-primary"
+          />
+          <div className="flex-1">
+            <div className="text-primary text-glow text-lg font-bold">Diwakar - Full Stack Developer</div>
+            <div className="text-terminal-text mt-2">
+              <p className="mb-2">
+                👋 Hello! I'm a passionate developer who loves building elegant solutions to complex problems.
+              </p>
+              <p className="mb-2">
+                🌍 Based in India, working with cutting-edge web technologies.
+              </p>
+              <p className="mb-2">
+                💡 I specialize in creating beautiful, performant, and user-friendly applications.
+              </p>
+              <p>
+                🚀 Always learning, always building, always improving.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -98,29 +112,56 @@ const commands: Record<string, () => CommandOutput> = {
         <div className="text-primary text-glow font-semibold mb-3">Featured Projects:</div>
         
         <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
-          <div className="text-secondary text-glow-secondary font-semibold">🚀 E-Commerce Platform</div>
-          <p className="text-sm mt-1 mb-2">Full-stack e-commerce solution with Next.js, Stripe integration, and real-time inventory management.</p>
-          <div className="flex gap-3 text-xs">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
-            <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+          <div className="flex gap-3">
+            <img 
+              src={projectEcommerce} 
+              alt="E-Commerce Platform" 
+              className="w-24 h-24 rounded object-cover border border-terminal-border"
+            />
+            <div className="flex-1">
+              <div className="text-secondary text-glow-secondary font-semibold">🚀 E-Commerce Platform</div>
+              <p className="text-sm mt-1 mb-2">Full-stack e-commerce solution with Next.js, Stripe integration, and real-time inventory management.</p>
+              <div className="flex gap-3 text-xs">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
+                <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
-          <div className="text-secondary text-glow-secondary font-semibold">🎨 Design System Library</div>
-          <p className="text-sm mt-1 mb-2">Comprehensive React component library with TypeScript, Storybook documentation, and accessibility features.</p>
-          <div className="flex gap-3 text-xs">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
-            <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+          <div className="flex gap-3">
+            <img 
+              src={projectDesignSystem} 
+              alt="Design System Library" 
+              className="w-24 h-24 rounded object-cover border border-terminal-border"
+            />
+            <div className="flex-1">
+              <div className="text-secondary text-glow-secondary font-semibold">🎨 Design System Library</div>
+              <p className="text-sm mt-1 mb-2">Comprehensive React component library with TypeScript, Storybook documentation, and accessibility features.</p>
+              <div className="flex gap-3 text-xs">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
+                <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
-          <div className="text-secondary text-glow-secondary font-semibold">📊 Analytics Dashboard</div>
-          <p className="text-sm mt-1 mb-2">Real-time analytics platform with data visualization, custom charts, and interactive filtering.</p>
-          <div className="flex gap-3 text-xs">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
-            <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+          <div className="flex gap-3">
+            <img 
+              src={projectAnalytics} 
+              alt="Analytics Dashboard" 
+              className="w-24 h-24 rounded object-cover border border-terminal-border"
+            />
+            <div className="flex-1">
+              <div className="text-secondary text-glow-secondary font-semibold">📊 Analytics Dashboard</div>
+              <p className="text-sm mt-1 mb-2">Real-time analytics platform with data visualization, custom charts, and interactive filtering.</p>
+              <div className="flex gap-3 text-xs">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub →</a>
+                <a href="https://demo.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Live Demo →</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
