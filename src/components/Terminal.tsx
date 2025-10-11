@@ -11,21 +11,19 @@ export interface TerminalLine {
   command?: string;
 }
 
-const INITIAL_LINES: TerminalLine[] = [
-  {
-    id: 0,
-    type: "output",
-    content: "Welcome to Diwakar's Portfolio Terminal v1.0.0",
-  },
-  {
-    id: 1,
-    type: "output",
-    content: 'Type "help" to see available commands.',
-  },
-];
-
 export const Terminal = () => {
-  const [lines, setLines] = useState<TerminalLine[]>(INITIAL_LINES);
+  const [lines, setLines] = useState<TerminalLine[]>([
+    {
+      id: 0,
+      type: "output",
+      content: "Welcome to Diwakar's Portfolio Terminal v1.0.0",
+    },
+    {
+      id: 1,
+      type: "output",
+      content: 'Type "help" to see available commands.',
+    },
+  ]);
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [currentCommand, setCurrentCommand] = useState("");
@@ -57,8 +55,7 @@ export const Terminal = () => {
 
     // Process command
     if (trimmedCommand.toLowerCase() === "clear") {
-      setLines(INITIAL_LINES);
-      setCurrentCommand("");
+      setLines([]);
       return;
     }
 
@@ -72,9 +69,6 @@ export const Terminal = () => {
 
     setLines((prev) => [...prev, newCommandLine, outputLine]);
     setCurrentCommand("");
-    
-    // Auto-focus input after command execution
-    setTimeout(() => inputRef.current?.focus(), 0);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
