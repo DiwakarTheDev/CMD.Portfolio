@@ -19,6 +19,7 @@ const commands: Record<string, () => CommandOutput> = {
           <div><span className="text-secondary text-glow-secondary">about</span> - Learn about me</div>
           <div><span className="text-secondary text-glow-secondary">skills</span> - View my technical skills</div>
           <div><span className="text-secondary text-glow-secondary">projects</span> - Browse my projects</div>
+          <div><span className="text-secondary text-glow-secondary">edu</span> - Edu details</div>
           <div><span className="text-secondary text-glow-secondary">contact</span> - Get in touch</div>
           <div><span className="text-secondary text-glow-secondary">clear</span> - Clear the terminal</div>
         </div>
@@ -202,6 +203,66 @@ const commands: Record<string, () => CommandOutput> = {
       </div>
     ),
   }),
+
+   edu: () => ({
+    type: "output",
+    content: (
+      <div className="space-y-4">
+        <div className="text-primary text-glow font-semibold mb-3">Education:</div>
+        
+        <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
+          <div className="flex gap-3">
+            {/* <img 
+              src={projectEcommerce} 
+              alt="E-Commerce Platform" 
+              className="w-24 h-24 rounded object-cover border border-terminal-border"
+            /> */}
+            <div className="flex-1">
+              <div className="text-secondary text-glow-secondary font-semibold">High School</div>
+              <p className="text-sm mt-1 mb-2">Full-stack e-commerce solution with Next.js, Stripe integration, and real-time inventory management.</p>
+              <div className="flex gap-3 text-xs">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
+          <div className="flex gap-3">
+            {/* <img 
+              src={projectDesignSystem} 
+              alt="Design System Library" 
+              className="w-24 h-24 rounded object-cover border border-terminal-border"
+            /> */}
+            <div className="flex-1">
+              <div className="text-secondary text-glow-secondary font-semibold">Collage</div>
+              <p className="text-sm mt-1 mb-2">Comprehensive React component library with TypeScript, Storybook documentation, and accessibility features.</p>
+              <div className="flex gap-3 text-xs">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border border-terminal-border rounded p-3 hover:border-primary transition-colors">
+          <div className="flex gap-3">
+            {/* <img 
+              src={projectAnalytics} 
+              alt="Analytics Dashboard" 
+              className="w-24 h-24 rounded object-cover border border-terminal-border"
+            /> */}
+            <div className="flex-1">
+              <div className="text-secondary text-glow-secondary font-semibold">Graduation</div>
+              <p className="text-sm mt-1 mb-2">Real-time analytics platform with data visualization, custom charts, and interactive filtering.</p>
+              <div className="flex gap-3 text-xs">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  }),
+
+
+
 };
 
 export const processCommand = (input: string): CommandOutput => {
